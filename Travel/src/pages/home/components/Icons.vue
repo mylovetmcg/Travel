@@ -20,7 +20,7 @@
 <script>
 export default {
   name: "HomeIcons",
-  data () {
+  data() {
     return {
       icons: [
         {
@@ -84,17 +84,17 @@ export default {
     };
   },
   computed: {
-      pages () {
-          const pages = []
-          this.icons.forEach((item,index)=>{
-              const page = Math.floor(index / 8)
-              if(!pages[page]) {
-                  pages[page] = []
-              }
-              pages[page].push(item);
-          })
-          return pages
-      }
+    pages() {
+      const pages = [];
+      this.icons.forEach((item, index) => {
+        const page = Math.floor(index / 8);
+        if (!pages[page]) {
+          pages[page] = [];
+        }
+        pages[page].push(item);
+      });
+      return pages;
+    }
   }
 };
 </script>
@@ -110,7 +110,11 @@ export default {
 }
 
 .icons >>> .swiper-pagination {
+  bottom: 0rem ;
+}
 
+.icons >>> .swiper-pagination-bullet-active {
+  background: #555;
 }
 
 .icon {
@@ -121,7 +125,7 @@ export default {
   padding-bottom: 25%;
   background: #fff;
   height: 0;
-
+  margin-top .2rem
   .icon-img {
     position: absolute;
     top: 0;
@@ -147,7 +151,7 @@ export default {
     height: 0.44rem;
     text-align: center;
     color: $darkTextColor;
-    ellipsis()
+    ellipsis();
   }
 }
 </style>
