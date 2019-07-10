@@ -18,42 +18,11 @@
 <script>
 export default {
   name: "HomeWeekend",
+  props: {
+    weekendList: Array
+  },
   data() {
     return {
-      weekendList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        },
-        {
-          id: "0004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/source/1811/b8/5d599bbdcf8b57.jpg_r_640x214_2ee055e3.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        }
-      ]
     };
   }
 };
@@ -63,7 +32,6 @@ export default {
 @import '~@/assets/styles/mixins.styl';
 
 .weekend-title {
-  margin-top: 0.2rem;
   line-height: 0.8rem;
   background: #f2f2f2;
   text-indent: 0.2rem;

@@ -19,42 +19,12 @@
 <script>
 export default {
   name: "HomeRecommend",
+  props: {
+    recommendList: Array,
+  },
   data() {
     return {
-      recommendList: [
-        {
-          id: "0001",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1707/88/889ae02b07140066a3.img.jpg_200x200_d3b1427c.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        },
-        {
-          id: "0002",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1707/88/889ae02b07140066a3.img.jpg_200x200_d3b1427c.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        },
-        {
-          id: "0003",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1707/88/889ae02b07140066a3.img.jpg_200x200_d3b1427c.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        },
-        {
-          id: "0004",
-          imgUrl:
-            "http://img1.qunarzz.com/sight/p0/1707/88/889ae02b07140066a3.img.jpg_200x200_d3b1427c.jpg",
-          title: "香港迪士尼乐园香港迪士尼乐园香港迪士尼乐园",
-          desc:
-            "春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020,春晚2日1夜 2020"
-        }
-      ]
+      
     };
   }
 };

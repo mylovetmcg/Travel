@@ -5,7 +5,7 @@
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icon" v-for="item of page" :key="item.id">
           <div class="icon-img">
-            <img class="icon-img-content" :src="item.url" alt />
+            <img class="icon-img-content" :src="item.imgUrl" alt />
           </div>
           <p class="icon-desc">{{item.desc}}</p>
         </div>
@@ -22,71 +22,18 @@ export default {
   name: "HomeIcons",
   data() {
     return {
-      icons: [
-        {
-          id: "0001",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "景点门票景点门票景点门票"
-        },
-        {
-          id: "0002",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png",
-          desc: "珠江夜游"
-        },
-        {
-          id: "0003",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png",
-          desc: "水上乐园"
-        },
-        {
-          id: "0004",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "0005",
-          url:
-            "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/a40ee278d67000f2a29d2e20f6a029b3.png",
-          desc: "自然风光"
-        },
-        {
-          id: "0006",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "0007",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "0008",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "景点门票"
-        },
-        {
-          id: "0009",
-          url:
-            "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-          desc: "景点门票"
-        }
-      ],
       swiperOption: {
         pagination: ".swiper-pagination"
       }
-    };
+    }
+  },
+  props: {
+    iconsList: Array
   },
   computed: {
     pages() {
       const pages = [];
-      this.icons.forEach((item, index) => {
+      this.iconsList.forEach((item, index) => {
         const page = Math.floor(index / 8);
         if (!pages[page]) {
           pages[page] = [];
@@ -106,7 +53,7 @@ export default {
 .icons >>> .swiper-container {
   width: 100%;
   height: 0;
-  padding-bottom: 50%;
+  padding-bottom: 55%;
 }
 
 .icons >>> .swiper-pagination {
